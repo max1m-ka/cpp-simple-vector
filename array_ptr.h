@@ -14,6 +14,10 @@ public:
     : ptr_(ptr) {
     }
 
+    ArrayPtr(size_t size) 
+    : ptr_(size > 0 ? new Type[size]() : nullptr){
+    }
+
     ArrayPtr(const ArrayPtr& ) = delete;
     ArrayPtr& operator=(const ArrayPtr&) = delete;
 
